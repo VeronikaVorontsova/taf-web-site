@@ -15,9 +15,9 @@ public class OzByLoginPageTest {
 
         ozByLoginElementsPage.clickLoginButton();
         ozByLoginElementsPage.clickEmailLoginTab();
-        ozByLoginElementsPage.loginWithEmailPasswordButton();
+        ozByLoginElementsPage.clickLoginWithEmailPasswordButton();
 
-        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyEmailWarning, driver.findElement(By.xpath(ozByLoginElementsPage.emptyEmailWarningLocator)).getText());
+        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyEmailWarning, ozByLoginElementsPage.getTextEmptyEmailWarning());
 
         Thread.sleep(2000);
         driver.quit();
@@ -33,7 +33,7 @@ public class OzByLoginPageTest {
         driver.findElement(By.xpath(ozByLoginElementsPage.passwordFieldLocator)).sendKeys("12345");
         driver.findElement(By.xpath(ozByLoginElementsPage.loginWithEmailPasswordButtonLocator)).click();
 
-        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyEmailWarning, driver.findElement(By.xpath(ozByLoginElementsPage.emptyEmailWarningLocator)).getText());
+        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyEmailWarning, ozByLoginElementsPage.getTextEmptyEmailWarning());
 
         Thread.sleep(2000);
         driver.quit();
@@ -47,9 +47,9 @@ public class OzByLoginPageTest {
         ozByLoginElementsPage.clickLoginButton();
         ozByLoginElementsPage.clickEmailLoginTab();
         ozByLoginElementsPage.sendKeysEmailField("user@tut.by");
-        ozByLoginElementsPage.loginWithEmailPasswordButton();
+        ozByLoginElementsPage.clickLoginWithEmailPasswordButton();
 
-        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyPasswordWarning, driver.findElement(By.xpath(ozByLoginElementsPage.emptyPasswordWarningLocator)).getText());
+        Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyPasswordWarning, ozByLoginElementsPage.getTextEmptyPasswordWarning());
 
         Thread.sleep(2000);
         driver.quit();
@@ -64,9 +64,9 @@ public class OzByLoginPageTest {
         ozByLoginElementsPage.clickEmailLoginTab();
         ozByLoginElementsPage.sendKeysEmailField("user@tut.by");
         ozByLoginElementsPage.sendKeysPasswordField("12345");
-        ozByLoginElementsPage.loginWithEmailPasswordButton();
+        ozByLoginElementsPage.clickLoginWithEmailPasswordButton();
 
-        Assertions.assertEquals(ozByLoginElementsPage.expectedWrongUserDataWarning, driver.findElement(By.xpath(ozByLoginElementsPage.notRegisteredEmailLocator)).getText());
+        Assertions.assertEquals(ozByLoginElementsPage.expectedWrongUserDataWarning, ozByLoginElementsPage.getTextNotRegisteredEmail());
 
         Thread.sleep(2000);
         driver.quit();

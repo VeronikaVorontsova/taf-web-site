@@ -23,31 +23,42 @@ public class Vek21LoginElementsPage {
     public Vek21LoginElementsPage(WebDriver driver){
         this.driver=driver;
     }
-    public void cookieRejectButton() throws InterruptedException {
+    public void clickCookieRejectButton() throws InterruptedException {
         driver.findElement(By.xpath(cookieRejectButtonLocator)).click();
         Thread.sleep(500);
         driver.findElement(By.xpath(cookieRejectButtonLocator)).click();
         Thread.sleep(500);
     }
-    public void accountButtonMain() throws InterruptedException {
+    public void clickAccountButtonMain() throws InterruptedException {
         driver.findElement(By.xpath(accountButtonMainLocator)).click();
         Thread.sleep(500);
     }
-    public void accountEnterButton() throws InterruptedException {
+    public void clickAccountEnterButton() throws InterruptedException {
         driver.findElement(By.xpath(accountEnterButtonLocator)).click();
         Thread.sleep(500);
     }
-    public void popupLoginButton() throws InterruptedException{
+    public void clickPopupLoginButton() throws InterruptedException{
         driver.findElement(By.xpath(popupLoginButtonLocator)).click();
         Thread.sleep(500);
     }
-    public void emailField(String newEmail) throws InterruptedException {
+    public void sendKeysEmailField(String newEmail) throws InterruptedException {
         driver.findElement(By.xpath(emailFieldLocator)).sendKeys("user@gmail.com");
         Thread.sleep(1000);
     }
-    public void passwordField(String newPassword) throws InterruptedException {
+    public void sendKeysPasswordField(String newPassword) throws InterruptedException {
         driver.findElement(By.xpath(passwordFieldLocator)).sendKeys("12345");
         Thread.sleep(1000);
+    }
+    public String getTextEmailEmptyError() throws InterruptedException {
+        Thread.sleep(500);
+        return driver.findElement(By.xpath(emailEmptyErrorLocator)).getText();
+    }
+    public String getTextPasswordEmptyError() {
+        return driver.findElement(By.xpath(passwordEmptyErrorLocator)).getText();
+    }
+
+    public String getTextWrongPassword() {
+        return driver.findElement(By.xpath(wrongPasswordLocator)).getText();
     }
 
 }

@@ -37,26 +37,23 @@ public class OzByLoginElementsPage {
     public void sendKeysPasswordField(String newPassword) {
         driver.findElement(By.xpath(passwordFieldLocator)).sendKeys("12345");
     }
-    public void loginWithEmailPasswordButton() throws InterruptedException {
+    public void clickLoginWithEmailPasswordButton() throws InterruptedException {
         driver.findElement(By.xpath(loginWithEmailPasswordButtonLocator)).click();
         Thread.sleep(1000);
     }
-    public String getNotRegisteredEmail() {
-        driver.findElement(By.xpath(notRegisteredEmailLocator)).getText();
+    public String getTextNotRegisteredEmail() {
 
-        return null;
+        return driver.findElement(By.xpath(notRegisteredEmailLocator)).getText();
     }
-    public String getEmptyEmailWarning() {
-        driver.findElement(By.xpath(emptyEmailWarningLocator)).getText();
+    public String getTextEmptyEmailWarning() {
 
-        return null;
+        return driver.findElement(By.xpath(emptyEmailWarningLocator)).getText();
 
     }
-    public String getEmptyPasswordWarning() throws InterruptedException {
-        driver.findElement(By.xpath(loginWithEmailPasswordButtonLocator)).click();
+    public String getTextEmptyPasswordWarning() throws InterruptedException {
         Thread.sleep(500);
 
-        return null;
+        return driver.findElement(By.xpath(emptyPasswordWarningLocator)).getText();
     }
 
 }

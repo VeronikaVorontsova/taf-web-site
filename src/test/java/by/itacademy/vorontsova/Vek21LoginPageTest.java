@@ -2,7 +2,6 @@ package by.itacademy.vorontsova;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,13 +12,13 @@ public class Vek21LoginPageTest {
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
         driver.get("https://www.21vek.by/");
 
-        vek21LoginElementsPage.cookieRejectButton();
-        vek21LoginElementsPage.accountButtonMain();
-        vek21LoginElementsPage.accountEnterButton();
-        vek21LoginElementsPage.popupLoginButton();
+        vek21LoginElementsPage.clickCookieRejectButton();
+        vek21LoginElementsPage.clickAccountButtonMain();
+        vek21LoginElementsPage.clickAccountEnterButton();
+        vek21LoginElementsPage.clickPopupLoginButton();
 
-        Assertions.assertEquals(vek21LoginElementsPage.expectedEmailWarning, driver.findElement(By.xpath(vek21LoginElementsPage.emailEmptyErrorLocator)).getText());
-        Assertions.assertEquals(vek21LoginElementsPage.expectedPasswordWarning, driver.findElement(By.xpath(vek21LoginElementsPage.passwordEmptyErrorLocator)).getText());
+        Assertions.assertEquals(vek21LoginElementsPage.expectedEmailWarning, vek21LoginElementsPage.getTextEmailEmptyError());
+        Assertions.assertEquals(vek21LoginElementsPage.expectedPasswordWarning, vek21LoginElementsPage.getTextPasswordEmptyError());
 
         Thread.sleep(2000);
         driver.quit();
@@ -31,13 +30,13 @@ public class Vek21LoginPageTest {
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
         driver.get("https://www.21vek.by/");
 
-        vek21LoginElementsPage.cookieRejectButton();
-        vek21LoginElementsPage.accountButtonMain();
-        vek21LoginElementsPage.accountEnterButton();
-        vek21LoginElementsPage.emailField("user@tut.by");
-        vek21LoginElementsPage.popupLoginButton();
+        vek21LoginElementsPage.clickCookieRejectButton();
+        vek21LoginElementsPage.clickAccountButtonMain();
+        vek21LoginElementsPage.clickAccountEnterButton();
+        vek21LoginElementsPage.sendKeysEmailField("user@tut.by");
+        vek21LoginElementsPage.clickPopupLoginButton();
 
-        Assertions.assertEquals(vek21LoginElementsPage.expectedPasswordWarning, driver.findElement(By.xpath(vek21LoginElementsPage.passwordEmptyErrorLocator)).getText());
+        Assertions.assertEquals(vek21LoginElementsPage.expectedPasswordWarning, vek21LoginElementsPage.getTextPasswordEmptyError());
 
         Thread.sleep(2000);
         driver.quit();
@@ -49,13 +48,13 @@ public class Vek21LoginPageTest {
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
         driver.get("https://www.21vek.by/");
 
-        vek21LoginElementsPage.cookieRejectButton();
-        vek21LoginElementsPage.accountButtonMain();
-        vek21LoginElementsPage.accountEnterButton();
-        vek21LoginElementsPage.passwordField("12345");
-        vek21LoginElementsPage.popupLoginButton();
+        vek21LoginElementsPage.clickCookieRejectButton();
+        vek21LoginElementsPage.clickAccountButtonMain();
+        vek21LoginElementsPage.clickAccountEnterButton();
+        vek21LoginElementsPage.sendKeysPasswordField("12345");
+        vek21LoginElementsPage.clickPopupLoginButton();
 
-        Assertions.assertEquals(vek21LoginElementsPage.expectedEmailWarning, driver.findElement(By.xpath(vek21LoginElementsPage.emailEmptyErrorLocator)).getText());
+        Assertions.assertEquals(vek21LoginElementsPage.expectedEmailWarning, vek21LoginElementsPage.getTextEmailEmptyError());
 
         Thread.sleep(3000);
         driver.quit();
@@ -67,16 +66,16 @@ public class Vek21LoginPageTest {
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
         driver.get("https://www.21vek.by/");
 
-        vek21LoginElementsPage.cookieRejectButton();
-        vek21LoginElementsPage.accountButtonMain();
-        vek21LoginElementsPage.accountEnterButton();
+        vek21LoginElementsPage.clickCookieRejectButton();
+        vek21LoginElementsPage.clickAccountButtonMain();
+        vek21LoginElementsPage.clickAccountEnterButton();
 
-        vek21LoginElementsPage.emailField("user@tut.by");
-        vek21LoginElementsPage.passwordField("12345");
+        vek21LoginElementsPage.sendKeysEmailField("user@tut.by");
+        vek21LoginElementsPage.sendKeysPasswordField("12345");
 
-        vek21LoginElementsPage.popupLoginButton();
+        vek21LoginElementsPage.clickPopupLoginButton();
 
-        Assertions.assertEquals(vek21LoginElementsPage.expectedWrongUserDataWarning, driver.findElement(By.xpath(vek21LoginElementsPage.wrongPasswordLocator)).getText());
+        Assertions.assertEquals(vek21LoginElementsPage.expectedWrongUserDataWarning, vek21LoginElementsPage.getTextWrongPassword());
 
         Thread.sleep(3000);
         driver.quit();
