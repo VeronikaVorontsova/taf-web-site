@@ -11,6 +11,7 @@ public class Vek21LoginPageTest {
         WebDriver driver = new ChromeDriver();
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
         driver.get("https://www.21vek.by/");
+        driver.manage().window().maximize();
 
         vek21LoginElementsPage.clickCookieRejectButton();
         vek21LoginElementsPage.clickAccountButtonMain();

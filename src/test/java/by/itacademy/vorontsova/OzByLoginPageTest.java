@@ -12,6 +12,7 @@ public class OzByLoginPageTest {
         WebDriver driver = new ChromeDriver();
         OzByLoginElementsPage ozByLoginElementsPage = new OzByLoginElementsPage(driver);
         driver.get("https://oz.by/");
+        driver.manage().window().maximize();
 
         ozByLoginElementsPage.clickLoginButton();
         ozByLoginElementsPage.clickEmailLoginTab();
