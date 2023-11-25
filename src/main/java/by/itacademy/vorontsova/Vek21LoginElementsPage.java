@@ -9,7 +9,7 @@ public class Vek21LoginElementsPage {
     public String accountEnterButtonLocator = "//*[@type='button' and contains(.,'Войти')]";
     public String popupLoginButtonLocator = "//*[contains(@class, 'Button-module__buttonText') and contains(text(),'Войти')]";
     public String emailFieldLocator = "//input[@id='login-email']";
-    public String passwordFieldLocator = "//*[@id=\"login-password\"]";
+    public String passwordFieldLocator = "//*[@id='login-password']";
     public String emailEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Электронная почта не указана')]";
     public String passwordEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Пароль не указан')]";
     public String wrongPasswordLocator = "//*[contains(@class, 'styles_errorText__LEN7M')]";
@@ -41,11 +41,11 @@ public class Vek21LoginElementsPage {
         driver.findElement(By.xpath(popupLoginButtonLocator)).click();
         Thread.sleep(500);
     }
-    public void sendKeysEmailField(String newEmail) throws InterruptedException {
+    public void sendKeysEmailField() throws InterruptedException {
         driver.findElement(By.xpath(emailFieldLocator)).sendKeys("user@gmail.com");
         Thread.sleep(1000);
     }
-    public void sendKeysPasswordField(String newPassword) throws InterruptedException {
+    public void sendKeysPasswordField() throws InterruptedException {
         driver.findElement(By.xpath(passwordFieldLocator)).sendKeys("12345");
         Thread.sleep(1000);
     }

@@ -34,7 +34,7 @@ public class Vek21LoginPageTest {
         vek21LoginElementsPage.clickCookieRejectButton();
         vek21LoginElementsPage.clickAccountButtonMain();
         vek21LoginElementsPage.clickAccountEnterButton();
-        vek21LoginElementsPage.sendKeysEmailField("user@tut.by");
+        vek21LoginElementsPage.sendKeysEmailField();
         vek21LoginElementsPage.clickPopupLoginButton();
 
         Assertions.assertEquals(vek21LoginElementsPage.expectedPasswordWarning, vek21LoginElementsPage.getTextPasswordEmptyError());
@@ -52,7 +52,7 @@ public class Vek21LoginPageTest {
         vek21LoginElementsPage.clickCookieRejectButton();
         vek21LoginElementsPage.clickAccountButtonMain();
         vek21LoginElementsPage.clickAccountEnterButton();
-        vek21LoginElementsPage.sendKeysPasswordField("12345");
+        vek21LoginElementsPage.sendKeysPasswordField();
         vek21LoginElementsPage.clickPopupLoginButton();
 
         Assertions.assertEquals(vek21LoginElementsPage.expectedEmailWarning, vek21LoginElementsPage.getTextEmailEmptyError());
@@ -71,8 +71,8 @@ public class Vek21LoginPageTest {
         vek21LoginElementsPage.clickAccountButtonMain();
         vek21LoginElementsPage.clickAccountEnterButton();
 
-        vek21LoginElementsPage.sendKeysEmailField("user@tut.by");
-        vek21LoginElementsPage.sendKeysPasswordField("12345");
+        vek21LoginElementsPage.sendKeysEmailField();
+        vek21LoginElementsPage.sendKeysPasswordField();
 
         vek21LoginElementsPage.clickPopupLoginButton();
 
