@@ -30,11 +30,11 @@ public class OzByLoginElementsPage {
         Thread.sleep(1000);
     }
 
-    public void sendKeysEmailField(String newEmail) {
+    public void sendKeysEmailField() {
         driver.findElement(By.xpath(emailFieldLocator)).sendKeys("user@tut.by");
 
     }
-    public void sendKeysPasswordField(String newPassword) {
+    public void sendKeysPasswordField() {
         driver.findElement(By.xpath(passwordFieldLocator)).sendKeys("12345");
     }
     public void clickLoginWithEmailPasswordButton() throws InterruptedException {

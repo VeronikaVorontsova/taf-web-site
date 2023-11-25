@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Vek21LoginPageTest {
-    @Test //Test1 - All fields are empty
+
+    @Test
     public void testLoginEmptyFields() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
@@ -25,7 +26,7 @@ public class Vek21LoginPageTest {
         driver.quit();
     }
 
-    @Test //Test2 - Email field is empty
+    @Test
     public void testLoginEmptyEmail() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
@@ -43,7 +44,7 @@ public class Vek21LoginPageTest {
         driver.quit();
     }
 
-    @Test //Test3 - Password field is empty
+    @Test
     public void testLoginEmptyPassword() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);
@@ -61,7 +62,7 @@ public class Vek21LoginPageTest {
         driver.quit();
     }
 
-    @Test //Test 4 - User data is not correct
+    @Test
     public void testLoginWrongUserData() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         Vek21LoginElementsPage vek21LoginElementsPage = new Vek21LoginElementsPage(driver);

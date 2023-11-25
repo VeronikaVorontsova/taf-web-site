@@ -4,17 +4,17 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class KvitkiLoginElementsPage {
-    public String acceptCookieLocator = "//*[contains(text(), 'Разрешить все cookie-файлы и принять Политику обработки персональных данных')]";
-    public String popupBannerCloseButtonLocator = "//div[contains(@class, 'popupbanner_close')]";
-    public String userAccountButtonLocator = "//*[contains(@class, 'user-account-icon')]";
-    public String loginPopupLocator = "//div[contains(@class, 'mat-mdc-dialog-surface mdc-dialog__surface')]";
-    public String emailInputLocator = "//input[contains(@type, 'email')]";
-    public String passwordInputLocator = "//input[contains(@type, 'password')]";
-    public String emptyEmailWarningLocator = "//*[contains(text(), 'Пожалуйста, заполните поле (Эл. почта)')]";
-    public String emptyPasswordWarningLocator = "//*[contains(text(), 'Пожалуйста, заполните поле (Пароль)')]";
-    public String wrongEmailFormatWarningLocator = "//*[contains(text(), 'Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com')]";
-    public String userNotExistsWarningLocator = "//div[contains(@class, 'info-text')]";
-    public String popupLoginButtonLocator = "//button[contains(text(), 'Войти')]";
+    private String acceptCookieLocator = "//*[contains(text(), 'Разрешить все cookie-файлы и принять Политику обработки персональных данных')]";
+    private String popupBannerCloseButtonLocator = "//div[contains(@class, 'popupbanner_close')]";
+    private String userAccountButtonLocator = "//*[contains(@class, 'user-account-icon')]";
+    private String loginPopupLocator = "//div[contains(@class, 'mat-mdc-dialog-surface mdc-dialog__surface')]";
+    private String emailInputLocator = "//input[contains(@type, 'email')]";
+    private String passwordInputLocator = "//input[contains(@type, 'password')]";
+    private String emptyEmailWarningLocator = "//*[contains(text(), 'Пожалуйста, заполните поле (Эл. почта)')]";
+    private String emptyPasswordWarningLocator = "//*[contains(text(), 'Пожалуйста, заполните поле (Пароль)')]";
+    private String wrongEmailFormatWarningLocator = "//*[contains(text(), 'Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com')]";
+    private String userNotExistsWarningLocator = "//div[contains(@class, 'info-text')]";
+    private String popupLoginButtonLocator = "//button[contains(text(), 'Войти')]";
 
     public String expectedEmptyEmailWarning = "Пожалуйста, заполните поле (Эл. почта)";
     public String expectedEmptyPasswordWarning = "Пожалуйста, заполните поле (Пароль)";

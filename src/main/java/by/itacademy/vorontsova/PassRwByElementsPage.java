@@ -4,17 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PassRwByElementsPage {
-    public String profileButtonLocator = "//span[contains(., 'Личный кабинет')]";
-    public String authorizationPopupLocator = "//div[contains(@class, 'auth-modal__header')]";
-    public String emailInputLocator = "//input[@name='login']";
-    public String passwordInputLocator = "//input[@name='password']";
-    public String loginButtonLocator = "//input[@name='dologin']";
-    public String emptyLoginErrorLocator = "//label[@id='login-error' and contains(text(), 'Заполните поле')]";
-    public String emptyPasswordErrorLocator = "//label[@id='password-error' and contains(text(), 'Заполните поле')]";
-    public String userIsNotFoundErrorLocator = "//*[contains(text(), 'Пользователь не найден')]";
 
-    public String expectedEmptyInputWarning = "Заполните поле";
-    public String expectedWrongUserWarning = "Пользователь не найден";
+    private String profileButtonLocator = "//span[contains(., 'Личный кабинет')]";
+    private String authorizationPopupLocator = "//div[contains(@class, 'auth-modal__header')]";
+    private String emailInputLocator = "//input[@name='login']";
+    private String passwordInputLocator = "//input[@name='password']";
+    private String loginButtonLocator = "//input[@name='dologin']";
+    private String emptyLoginErrorLocator = "//label[@id='login-error' and contains(text(), 'Заполните поле')]";
+    private String emptyPasswordErrorLocator = "//label[@id='password-error' and contains(text(), 'Заполните поле')]";
+    private String userIsNotFoundErrorLocator = "//*[contains(text(), 'Пользователь не найден')]";
+
+    String expectedEmptyInputWarning = "Заполните поле";
+    String expectedWrongUserWarning = "Пользователь не найден";
 
     WebDriver driver;
 

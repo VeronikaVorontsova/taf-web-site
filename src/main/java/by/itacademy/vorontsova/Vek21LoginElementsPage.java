@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Vek21LoginElementsPage {
-    public String cookieRejectButtonLocator = "//*[@type='button' and contains(.,'Отклонить')]";
-    public String accountButtonMainLocator = "//*[@class='userToolsText']";
-    public String accountEnterButtonLocator = "//*[@type='button' and contains(.,'Войти')]";
-    public String popupLoginButtonLocator = "//*[contains(@class, 'Button-module__buttonText') and contains(text(),'Войти')]";
-    public String emailFieldLocator = "//input[@id='login-email']";
-    public String passwordFieldLocator = "//*[@id='login-password']";
-    public String emailEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Электронная почта не указана')]";
-    public String passwordEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Пароль не указан')]";
-    public String wrongPasswordLocator = "//*[contains(@class, 'styles_errorText__LEN7M')]";
+    private String cookieRejectButtonLocator = "//*[@type='button' and contains(.,'Отклонить')]";
+    private String accountButtonMainLocator = "//*[@class='userToolsText']";
+    private String accountEnterButtonLocator = "//*[@type='button' and contains(.,'Войти')]";
+    private String popupLoginButtonLocator = "//*[contains(@class, 'Button-module__buttonText') and contains(text(),'Войти')]";
+    private String emailFieldLocator = "//input[@id='login-email']";
+    private String passwordFieldLocator = "//*[@id='login-password']";
+    private String emailEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Электронная почта не указана')]";
+    private String passwordEmptyErrorLocator = "//*[contains(@class, 'ErrorMessage-module__message') and contains(text(), 'Пароль не указан')]";
+    private String wrongPasswordLocator = "//*[contains(@class, 'styles_errorText__LEN7M')]";
 
     String expectedEmailWarning = "Электронная почта не указана";
     String expectedPasswordWarning = "Пароль не указан";

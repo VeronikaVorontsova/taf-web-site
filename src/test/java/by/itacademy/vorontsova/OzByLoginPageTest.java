@@ -47,7 +47,7 @@ public class OzByLoginPageTest {
 
         ozByLoginElementsPage.clickLoginButton();
         ozByLoginElementsPage.clickEmailLoginTab();
-        ozByLoginElementsPage.sendKeysEmailField("user@tut.by");
+        ozByLoginElementsPage.sendKeysEmailField();
         ozByLoginElementsPage.clickLoginWithEmailPasswordButton();
 
         Assertions.assertEquals(ozByLoginElementsPage.expectedEmptyPasswordWarning, ozByLoginElementsPage.getTextEmptyPasswordWarning());
@@ -63,8 +63,8 @@ public class OzByLoginPageTest {
 
         ozByLoginElementsPage.clickLoginButton();
         ozByLoginElementsPage.clickEmailLoginTab();
-        ozByLoginElementsPage.sendKeysEmailField("user@tut.by");
-        ozByLoginElementsPage.sendKeysPasswordField("12345");
+        ozByLoginElementsPage.sendKeysEmailField();
+        ozByLoginElementsPage.sendKeysPasswordField();
         ozByLoginElementsPage.clickLoginWithEmailPasswordButton();
 
         Assertions.assertEquals(ozByLoginElementsPage.expectedWrongUserDataWarning, ozByLoginElementsPage.getTextNotRegisteredEmail());
