@@ -13,7 +13,6 @@ public class PassRwByElementsPage {
     public String emptyPasswordErrorLocator = "//label[@id='password-error' and contains(text(), 'Заполните поле')]";
     public String userIsNotFoundErrorLocator = "//*[contains(text(), 'Пользователь не найден')]";
 
-
     public String expectedEmptyInputWarning = "Заполните поле";
     public String expectedWrongUserWarning = "Пользователь не найден";
 
