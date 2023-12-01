@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class PassRwByElementsPage {
 
     private String profileButtonLocator = "//span[contains(., 'Личный кабинет')]";
-    private String authorizationPopupLocator = "//div[contains(@class, 'auth-modal__header')]";
+    private String authorizationPopupLocator = "//*[contains(@class, 'auth-modal__header')]";
     private String emailInputLocator = "//input[@name='login']";
     private String passwordInputLocator = "//input[@name='password']";
     private String loginButtonLocator = "//input[@name='dologin']";
