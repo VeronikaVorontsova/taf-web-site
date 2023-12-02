@@ -22,12 +22,11 @@ public class TempoOrderTest extends BaseTest {
     }
 
     @Test
-    public void addPizzaBeverageAndCheckCart() throws InterruptedException {
+    public void addPizzaBeverageAndCheckCart()  {
         TempoElementsPage tempoElementsPage = new TempoElementsPage(driver);
         tempoElementsPage.clickPizzaTab();
         tempoElementsPage.clickMargaritaOrderButton();
         tempoElementsPage.clickPopupOrderButton();
-        Thread.sleep(1000);
         tempoElementsPage.clickBeverageTab();
         tempoElementsPage.clickColaOrderButton();
         tempoElementsPage.clickCartButton();
