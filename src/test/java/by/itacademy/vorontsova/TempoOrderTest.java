@@ -12,12 +12,26 @@ public class TempoOrderTest extends BaseTest {
     }
 
     @Test
-    public void addAndCheckCart() {
+    public void addPizzaAndCheckCart() {
         TempoElementsPage tempoElementsPage = new TempoElementsPage(driver);
         tempoElementsPage.clickPizzaTab();
         tempoElementsPage.clickMargaritaOrderButton();
         tempoElementsPage.clickPopupOrderButton();
         tempoElementsPage.clickCartButton();
-        Assertions.assertTrue(tempoElementsPage.checkPositionInCartIsDisplayed());
+        Assertions.assertTrue(tempoElementsPage.isPizzaInCartDisplayed());
+    }
+
+    @Test
+    public void addPizzaBeverageAndCheckCart() throws InterruptedException {
+        TempoElementsPage tempoElementsPage = new TempoElementsPage(driver);
+        tempoElementsPage.clickPizzaTab();
+        tempoElementsPage.clickMargaritaOrderButton();
+        tempoElementsPage.clickPopupOrderButton();
+        Thread.sleep(1000);
+        tempoElementsPage.clickBeverageTab();
+        tempoElementsPage.clickColaOrderButton();
+        tempoElementsPage.clickCartButton();
+        Assertions.assertTrue(tempoElementsPage.isPizzaInCartDisplayed());
+        Assertions.assertTrue(tempoElementsPage.isBeverageInCartDisplayed());
     }
 }
